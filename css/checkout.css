@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.left-section {
+    padding-top: 70px;
+    height: 100vh;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items:center; /* Căn các phần tử về phía bên trái */
+    position: relative;
+}
+.top-left-section{
+    width: 60%;
+}
+#cart{
+    padding-top: 70px;
+}
+.right-section {
+    height: auto;
+    width: 40%;
+    background-color: #FAFAFA;
+    padding: 20px;
+    border-left:1px solid #e1e1e1;
+}
+.right-section img{
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+nav a {
+    color: #555;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info a {
+    color: #007bff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+form label {
+    font-size: 14px;
+    margin: 10px 0 5px;
+}
+
+form input, form select {
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    height: 45px;
+}
+
+.left-section h2{
+    padding-bottom:40px ;
+}
+
+.btn-submit {
+    padding: 10px;
+    font-size: 14px;
+    background-color: #026e36;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    
+    height: 55px;
+    transition: background-color 0.3s;
+}
+.btn-submit:hover{
+    background-color: #004b24;
+}
+.return-cart {
+    display: block;
+    color: #026e36;
+    text-decoration: none;
+    margin-top: 20px;
+    transition:color 0.3s;
+}
+.return-cart:hover {
+    color: #004b24;
+}
+.order-summary {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+.foot-form{
+    display: flex;
+    justify-content: space-between;
+}
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.book-cover {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+.cost, .shipping-fee, .total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.total {
+    font-weight: bold;
+    font-size: 16px;
+}
+#cart table{
+    border: 1px solid #e6e6e6;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+}
+#cart table td{
+    font-size: 14px;
+    padding-bottom:15px;
+}
+#cart table td:nth-child(1){
+    width: 10%;
+    text-align: left;
+}
+#cart table td:nth-child(2){
+    width: 50%;
+    text-align: left;
+}
+#cart table td:nth-child(3){
+    width: 20%;
+    text-align: center;
+}
+#cart table td:nth-child(4){
+    width: 20%;
+    text-align: right;
+}
+.coupon {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.coupon input{
+    border-radius: 6px;
+    width: 60%;
+    border: 1px solid #d9d9d9;
+    padding-left: 10px;
+    transform: all 0.2s;
+}
+.coupon input:focus{
+    outline: 2px solid #026e36 ;
+}
+.normal{
+    background-color:#026e36;
+    color: #fff;
+    padding: 5px 15px;
+    outline: none;
+    border-radius: 6px;
+    border: none;
+    height: 40px;
+    transition: all 0.3s;
+}
+.normal:hover{
+    background-color: #004b24;
+    color: #fff;
+    padding: 5px 15px;
+    outline: none;
+    border-radius: 6px;
+    border: none;
+    height: 40px;
+}
+/* Phần CSS đã có trước đó */
+
+@media (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+        padding: 30px;
+        height: auto;
+    }
+    form{
+        width: 100%;
+    }
+    .top-left-section{
+        width: 100%;
+    }
+    .foot-form{
+        display: flex;
+        gap: 100px;
+        align-items: center;
+    }
+    .btn-submit {
+        width: 100%;
+    }
+    .order-summary {
+        margin-bottom: 20px;
+    }
+    
+
+}
