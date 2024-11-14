@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> 
+    <link rel="stylesheet" href="css/font-awesome/css/all.min.css"/>
+    <title>Cua Hang Sach Tri Thuc</title>
+    <link rel="stylesheet" href="../../../../css/detail.css" />
+    <link rel="stylesheet" href="../../../../image" />
+  </head>
+  <body>
+    <!-- Phần đầu trang (header) -->
+    <header class="header">
+      <div class="header-container">
+        <!-- Logo -->
+        <div class="logo">
+          <img src="../../../../image/thumbnail/smalling.png" alt="Logo" />
+        </div>
+        <div class="logo"></div>
+
+        <!-- Thanh tìm kiếm -->
+        <div class="search-bar">
+          <input type="text" id="searchInput" placeholder="Tìm kiếm..." onkeypress="handleKeyPress(event)" />
+          <button onclick="search()">Tìm kiếm</button>
+          <div id="userQuery"></div>
+          <script src="../../../../js/search4.js"></script>
+        </div>
+
+            <!-- Các biểu tượng chức năng -->
+            <div class="header-icons">
+          <ul class="ul-control-box">
+          <li class="top-hotline">
+            <a href="#">
+              <img src="../../../../image/hethong/phone1.png" alt="Tra cứu đơn hàng" />
+              <span>Tra cứu đơn hàng</span>
+            </a>
+          </li>
+          <li class="top-cart-box" id="cartBox">
+            <a href="javascript:void(0);">
+              <img src="../../../../image/hethong/giohang6.png" alt="Giỏ hàng" />
+              <span>Giỏ hàng</span>
+            </a>
+          </li>
+          <li class="user-box">
+            <a class="dropbox-info" onclick="UsertoggleMenu()">
+              <img src="../../../../image/hethong/user1.png" alt="Tài khoản" />
+              <span>Tài khoản</span>
+            </a>
+            <ul class="info-user" id="loginMenu">
+              <div class="login-menu">
+                <li class="info">
+                  <a href="../../login.html">
+                    <img src="../../../../image/hethong/enter.png" alt="">
+                    <p>Đăng nhập</p>
+                  </a>
+                </li>
+                <li class="info">
+                  <a href="../../register.html">
+                    <img src="../../../../image/hethong/add.png" alt="">
+                    <p>Đăng ký</p>
+                  </a>
+                </li>
+              </div>
+              
+            </ul>
+          </li> 
+              </ul>
+        </div>
+        </div>
+        <!-- Phần dưới của đầu trang -->
+        <div class="header-bottom">
+         
+          <div class="header-bottom-container">
+            <div class="menu">
+              <img src="../../../../image/hethong/list.png" alt="Phone" />
+                    <div id="menuToggle"><a href="#">DANH MỤC SÁCH</a>
+                      <div id="sub_menu">
+                        <ul class="menu_list">
+                          <li ><a href="../../user.html"><img src="../../../../image/imgbook/s1.webp"><span>TRANG CHỦ </span></img ></a><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                          <li ><a href="../../main.html"><img src="../../../../image/imgbook/s2.webp"><span>TOP SÁCH THAY ĐỔI CUỘC ĐỜI </span></img ></a><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                          <li id="sub_menu_child"><a href="../../main2.html"><img src="../../../../image/imgbook/s3.webp"><span>SÁCH MẦM NON </span></img ></a><i class="fa fa-angle-right" aria-hidden="true"></i>
+                          <div id="sub_menu2">
+                            <ul class="menu_list2">
+                              <li><a href="../../main2.1.html">▶ Bé Vào Lớp 1</a></li>
+                              <li><a href="../../main2.2.html">▶ Từ Điển Tranh</a></li>
+                              <li><a href="../../main2.3.html">▶ Phát Triển Trí Tuệ </a></li>
+                            </ul>
+                          </div>  
+                          </li>
+                          <li class="sub_menu_child_1"><a href="../../main3.html"><img src="../../../../image/imgbook/s4.webp"><span>SÁCH THIẾU NHI </span></img ></a><i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <div id="sub_menu3">
+                              <ul class="menu_list2">
+                                <li><a href="../../main3.1.html">▶ Truyện Tranh Màu</a></li>
+                                <li><a href="../../main3.2.html">▶ Truyện Chữ</a></li>
+                                <li><a href="../../main3.3.html">▶ Kỹ Năng Sống Cho Học Sinh </a></li>
+                              </ul>
+                            </div>
+                          
+                          </li>
+                          <li class="sub_menu_child_2"><a href="../../main4.html"><img src="../../../../image/imgbook/s5.webp"><span>SÁCH KỸ NĂNG </span></img ></a><i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <div id="sub_menu4">
+                              <ul class="menu_list2">
+                                <li><a href="../../main4.1.html">▶ Kỹ Năng Sống</a></li>
+                                <li><a href="../../main4.2.html">▶ Kỹ Năng Văn Phòng Công Sở</a></li>
+                                
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+              
+              
+            
+            <div class="menu">
+              <img src="../../../../image/hethong/book8.png" alt="Phone" />
+              <a href="#">Sản phẩm đã xem</a>
+            </div>
+            <div class="menu">
+              <img src="../../../../image/hethong/truck2.png" alt="Phone" />
+              <a href="#">Ship COD Toàn Quốc</a>
+            </div>
+            <div class="menu">
+              <img src="../../../../image/hethong/truck3.png" alt="Phone" />
+              <a href="#">Free Ship Đơn Hàng Trên 300k</a>
+            </div>
+            <div class="phone-number">
+              <img src="../../../../image/hethong/phone2.png" alt="Phone" />
+              <span>0111 222 333 / 0333 666 999</span>
+            </div>
+          </div>
+          </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        
+    </div>
+    <div class="fixed-social1">
+      <a href="https://www.facebook.com/TriThucBook" target="_blank">
+        <img src="../../../../image/hethong/fb.png" width="40" height="40" /><br />
+      </a>
+      <a href="javascript:void(0);" id="cartIcon">
+        <img src="../../../../image/hethong/giohang1.png" width="40" height="40" /><br />
+      </a>
+      <div class="box">
+        <a href="#top">
+          <img
+            style="padding-left: 5px"
+            src="../../../../image/hethong/up.png"
+            width="30"
+            height="30"
+          />
+        </a>
+      </div>
+    </div>
+    <div class="main col-md-12 col-xs-12">  
+        <div class="container">
+            <div class="row">
+              <ol class="breadcrumb breadcrumb-arrow hidden-sm hidden-xs">
+      			<li><a href="/" target="_self">Trang chủ</a></li>
+            <span> &#8260; </span>
+      			<li><a href="#" target="_self">TẤT CẢ SẢN PHẨM</a></li>
+            <span> &#8260; </span>
+      			<li class="active"><span> Học mà chơi - Chơi mà học</span></li>
+      		</ol>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-xs-12 col-lg-6 col-sm-12 left">
+                <div class="product_preview">
+                  <button type="button" class="try-to-read">
+                    <img
+                      class="doc_thu"
+                      src="../../../../image/imgbook/doc_thu.webp"
+                    />
+                  </button>
+                  <img
+                    class="product-image img"
+                    src="../../../../image/imgbook/main2/book2.8.webp"
+                    alt="book2"
+                  />
+                </div>
+              </div>
+              <!-- .... -->
+              <div class="col-md-6 col-xs-12 col-lg-6 col-sm-12 right">
+                <div class="product-detail">
+                  <h1 class="product-title">
+                    Sách: Học Mà Chơi, Chơi Mà Học Dành Cho Trẻ 5 Đến 6 Tuổi - Túi 6 Cuốn
+                  </h1>
+                  <span class="sku"
+                    ><strong>Mã sản phẩm:</strong> 8936067590975
+                  </span>
+                  <div class="author-product">
+                    Tác giả: <a class="author" href="#"> Nguyễn Thị Hương Giang</a>
+                  </div>
+                  
+                  <div class="author-product">
+                    <span>NXB: Đại Học Sư Phạm</span>
+                  </div>
+                  <div class="author-product">Kích thước: 17 x 24  cm</div>
+                  <div class="author-product">Năm xuất bản :2017</div>
+                  <div class="author-product">Khối Lượng :370 grams</div>
+                  <div class="author-product">Bìa : bìa mềm</div>
+                  <!-- ------- -->
+                  <div class="row">
+                    <div class="col-sm-5 col-xs-5 col-md-5 left_box">
+                      <div class="price detail">
+                        <div class="current">116,600đ</div>
+                        <div class="pre">145,000đ</div>
+                        <div class="sale">Giảm 20%</div>
+                      </div>
+                      <div class="quantity_detail">
+                        <div class="title">Số Lượng</div>
+                        <div class="entry number-minus">﹣</div>
+                        <!-- Nút giảm -->
+                        <div class="entry number">1</div>
+                        <!-- Số lượng -->
+                        <div class="entry number-plus">+</div>
+                        <!-- Nút tăng -->
+                      </div>
+                      </div>
+                      <div class="col-sm-7 col-xs-7 col-md-7 right_box">
+                        <h3 class="title_right">Dịch vụ của chúng tôi</h3>
+                      
+                        <p class="serv-1">Giao tận nhà trong 3-7 ngày làm việc.</p>
+                        <p class="serv-2">Miễn phí giao hàng tòa Quốc trên 300k.</p>
+                      </div>
+                    </div>
+                    <div class="detail-info-entry"><a href="#" class="button btn-outline btn-addcart">THÊM VÀO GIỎ</a></div>
+                    <div class="detail_sale">
+                      <h3>Dịch vụ & Khuyến mãi</h3>
+                        <p>🔖 Đối với sản phầm giảm 40% - 50% - 70% (sản phẩm xả kho): Mỗi khách hàng được mua tối đa 5 sản phẩm/ 1 mặt hàng/ 1 đơn hàng</p>
+                        <p>🎁Tặng bookmark cho tất cả các đơn hàng (sách kỹ năng, sách kinh doanh)  </p>
+                        <p>🎁 Freeship cho đơn hàng từ 300K trở lên</p>
+                        <p>🎁 Tăng túi vải + FREE SHIP cho đơn hàng từ 500k trở lên</p>
+                    </div>
+                    <div class="box_social">
+                      <div class="fb">
+                        <div class="fb-like fb_iframe_widget" data-href="http://127.0.0.1:5500/CuaHangBanSach/book1.html#" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=504304589901470&amp;container_width=0&amp;href=https%3A%2F%2Fminhlongbook.vn%2Fproducts%2Fsach-ban-khong-can-phai-to-ra-hoan-hao-den-the&amp;layout=button_count&amp;locale=vi_VN&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;size=small"><span style="vertical-align: bottom; width: 150px; height: 28px;"><iframe name="fc551fa11f061a385" width="1000px" height="1000px" data-testid="fb:like Facebook Social Plugin" title="fb:like Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v12.0/plugins/like.php?action=like&amp;app_id=504304589901470&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df98c61aaa29819b07%26domain%3Dminhlongbook.vn%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fminhlongbook.vn%252Ff158d3acf9c39a58c%26relation%3Dparent.parent&amp;container_width=0&amp;href=https%3A%2F%2Fminhlongbook.vn%2Fproducts%2Fsach-ban-khong-can-phai-to-ra-hoan-hao-den-the&amp;layout=button_count&amp;locale=vi_VN&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;size=small" style="border: none; visibility: visible; width: 150px; height: 28px;" class=""></iframe></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-md-9 col-ms-9 col-xs-12 box_left">
+               <h2>MÔ TẢ</h2>
+               <div class="product_decription">
+                <strong>Học mà chơi - Chơi mà học(5-6 cuốn) </strong> 
+                <p></p>
+                <span> 1. Tích cực nhưng đừng tích cực độc hại</span>
+                <p></p>
+                <p>Từ nhỏ chúng ta đã được dạy rằng: cảm nhận tích cực là thứ an toàn, được yêu thích; còn cảm nhận tiêu cực là thứ nguy hiểm, không được chào đón.</p>
+                <p></p>
+                <p>Chúng ta luôn sẵn lòng thể hiện ra mặt tốt, không bằng lòng thể hiện ra mặt xấu của bản thân: lúc nào cũng muốn tỏ ra vui vẻ chứ không thích để người khác thấy mình đang buồn; lúc nào cũng tỏ ra kiên cường, giấu nhẹm đi sự yếu đuối.</p>
+                <p></p>
+                <p>Theo thời gian, chúng ta quên mất rằng thực ra mình cũng có nỗi đau, cũng có mặt yếu đuối. Ngay cả khi biết rõ điều đó, chúng ta cũng không chấp nhận nó, càng không muốn người khác biết về nó.</p>
+                <p></p>
+                <p>Chúng ta đã quen với việc dành niềm vui cho người khác và giữ lại nỗi đau cho mình. Chúng ta cũng đã quen với việc dành sự kiên cường cho người khác, đồng thời giữ lại sự yếu đuối cho bản thân.</p>
+                <p></p>
+                <p></p>
+                <span>2. Cuốn sách này sẽ hỗ trợ bạn thấu hiểu và chia sẻ  của mình một cách tích cực và chân thành </span>
+                <p></p>
+                <p>Ai cũng có lúc đau khổ, yếu mềm. Có thể bạn không chia sẻ nỗi đau của mình với tất cả mọi người, nhưng chỉ cần bạn xây dựng mối quan hệ với một vài người để bạn đủ tin tưởng chia sẻ những cảm xúc thật của mình, đời này coi như cũng đủ rồi.</p>
+                <p></p>
+                <p>Bạn không cần phải lúc nào cũng thể hiện năng lượng tích cực, đôi khi, hãy chia sẻ cả sự yếu đuối và nỗi đau của bạn. Đó chính là cách để nâng cao mối quan hệ giữa bạn và người bạn tin tưởng, cũng như là để giúp chính bản thân bạn cảm thấy nhẹ nhàng hơn.</p>
+                <p></p>
+                <p>Cuốn sách Bạn Không Cần Phải Tỏ Ra Hoàn Hảo Đến Thế sẽ hỗ trợ bạn đồng cảm, thấu hiểu và chia sẻ cảm xúc của mình một cách tích cực và chân thành; cũng như giúp bạn học cách yêu thương và được yêu thương, mở lòng mình với đối phương thật chân thực; từ đó bạn sẽ sống một cuộc đời nhẹ nhàng và ý nghĩa hơn!</p>
+                <p></p>
+                <p>Bạn không cần phải tỏ ra hoàn hảo đến thế, hãy cùng học cách chấp nhận và thương yêu cả những trầy xước của chính mình</p>
+                <p></p>
+                <p>#sách_mới</p>
+                
+                <p></p>
+      
+               </div>
+              </div>
+              <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="relative">
+                  <h2 ><a href="">SẢN PHẨM BÁN CHẠY</a></h2>
+                   <div class="readmore"><a href="../../main.html">Xem thêm </a></div>
+                </div>
+              </div>
+        </div>
+        <div class="drelatived">
+          <div class="title_chir">
+            <h2>SẢN PHẨM LIÊN QUAN</h2>
+          </div>
+        </div>
+        <div class="show1">
+          <div class="title_chir">
+            <h2>SẢN PHẨM ĐÃ XEM</h2>
+          </div>
+          
+          <div id="list-product">
+            <button id="prev-btn">❮</button>
+            
+              <div class="product-item">
+                  <div class="chir_img"><a href="#" class="link_img"><img src="../../../../image/imgbook/book10.webp"  alt="Sách: Tư Duy Quà Tặng" class="product-image"></a></div>
+                  <div class="product_clearfix">
+                    <a href="#"  class="product-name">Sách: Tư Duy Quà Tặng</a>
+                    <p>
+                      <del class="original-price">148,000₫</del>
+                       118,400₫
+                      <span class="discount-tag">-20%</span>
+                   </p>
+                  </div>
+              </div>
+
+              
+          
+              <div class="product-item">
+                  <div class="chir_img"><a href="#"  class="link_img"><img src="../../../../image/imgbook/book11.webp"  alt="Sách: Thay Đổi Một Suy Nghĩ Thay Đổi..." class="product-image"></a></div>
+                 <div class="product_clearfix">
+                    <a href="#" class="product-name">Sách: Thay Đổi Một Suy Nghĩ Thay Đổi...</a>
+                   <p>
+                      <del class="original-price">92,000₫</del>
+                      73,600₫
+                      <span class="discount-tag">-20%</span>
+                   </p>
+                 </div>
+              </div>
+          
+              <div class="product-item">
+                  <div class="chir_img"><a href="#"  class="link_img"><img src="../../../../image/imgbook/book12.webp"  alt="Sách: Khéo Ăn Nói Sẽ Có Được Thiên Hạ" class="product-image"></a></div>
+                  <div class="product_clearfix">
+                    <a href="#" class="product-name">Sách: Khéo Ăn Nói Sẽ Có Được Thiên Hạ</a>
+                    <p>
+                      <del class="original-price">130,000₫</del>
+                      104,600₫
+                      <span class="discount-tag">-20%</span>
+                   </p>
+                  </div>
+              </div>
+          
+              <div class="product-item">
+                  <div class="chir_img"><a href="#"  class="link_img"><img src="../../../../image/imgbook/book13.webp"  alt="Sách: Mỗi Lần Vấp Ngã Là Một Lần Tr..." class="product-image"></a></div>
+                 <div class="product_clearfix">
+                    <a href="" class="product-name">Sách: Mỗi Lần Vấp Ngã Là Một Lần Tr...</a>
+                    <p>
+                      <del class="original-price">120,000₫</del>
+                       96,600₫
+                      <span class="discount-tag">-20%</span>
+                   </p>
+                 </div>
+              </div>
+              <div class="product-item">
+                <img src="../../../../image/imgbook/book7.webp"  alt="Sách: Trở Thành Phiên Bản Tốt Nhất Của Bạn" class="product-image">
+                <a href="" class="product-name">Sách: Hạnh Phúc Đích Thực-Sức Mạnh...</a>
+                <p>
+                  <del class="original-price">88,000₫</del>
+                   70,000₫
+                  <span class="discount-tag">-20%</span>
+               </p>
+            </div>
+            <button id="next-btn">❯</button>
+          </div>
+          
+        </div>
+    </div>
+    
+    <section id="last-footer">
+      <div class="father">
+        <div class="child">
+          <span class="name-icon pull-left fa fa-truck"></span>
+          <h4>MIỄN PHÍ VẬN CHUYỂN</h4>
+          <p>cho đơn hàng trên 300.000 VNĐ</p>
+        </div>
+      </div>
+      <div class="father">
+        <div class="child">
+          <span><i class="fa-solid fa-money-bill-1-wave"></i> </span>
+          <h4>SHIP COD TOÀN QUỐC</h4>
+          <p>Thanh toán khi nhận sách</p>
+        </div>
+      </div>
+      <div class="father">
+        <div class="child">
+          <span><i class="fa-regular fa-face-laugh-wink"></i></span>
+          <h4>MIỄN PHÍ ĐỔI TRẢ HÀNG</h4>
+          <p>trong vòng 10 ngày</p>
+        </div>
+      </div>
+      <div class="father">
+        <div class="child">
+          <span class="name-icon pull-left fa fa-phone"></span>
+          <h4>HOTLINE</h4>
+          <p>0111 222 333 / 0333 666 999</p>
+        </div>
+      </div>
+    </section>
+    <div
+      class="bottom"
+      style="width: 100%; height: 250px; background-color: #006633"
+    >
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Cột 1: Thông tin công ty -->
+          <div class="footer-column">
+            <img src="../../../../image/thumbnail/smalling.png" alt="Minh Long Book Logo" />
+            <p>
+              <strong
+                >Công ty TNHH Một Thành viên Thương mại & Dịch vụ Văn hóa Tri
+                Thức</strong
+              >
+            </p>
+            <p>Mã Số Thuế: 0102726224</p>
+            <p>
+              <i class="fa fa-map-marker"></i> Văn phòng: Số 345, Dãy A, Đường
+              An Dương Vương, Phường 5, Quận 5, TPHCM.
+            </p>
+            <p>
+              <i class="fa fa-map-marker"></i> Cửa hàng: Gian hàng Tri Thức Book
+              tại Phố Sách Sài Gòn, Phố 3 tháng 2, Nguyễn Thị Minh Khai, TPHCM.
+            </p>
+            <p><i class="fa fa-phone"></i> 0333 666 999 - 0111 222 333</p>
+            <p><i class="fa fa-envelope"></i> cskh@trithucbook.vn</p>
+            <p>
+              <i class="fa fa-map-marker"></i> Chi nhánh Miền Bắc: 33 Đỗ Thừa
+              Tự, Tân Quý, Tân Phú, Hà Nội, Việt Nam.
+            </p>
+            <p><i class="fa fa-phone"></i> 0111 222 333</p>
+          </div>
+
+          <!-- Cột 2: Tin tức -->
+          <div class="footer-column">
+            <h3>TIN TỨC</h3>
+            <ul>
+              <li><a href="#">Giới thiệu</a></li>
+              <li><a href="#">Điểm sách</a></li>
+              <li><a href="#">Tuyển dụng</a></li>
+              <li><a href="#">Sự kiện</a></li>
+              <li><a href="#">Tin khuyến mại</a></li>
+            </ul>
+          </div>
+
+          <!-- Cột 3: Hỗ trợ khách hàng -->
+          <div class="footer-column">
+            <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+            <ul>
+              <li><a href="#">Điều khoản sử dụng</a></li>
+              <li><a href="#">Hướng dẫn mua hàng</a></li>
+              <li><a href="#">Phương thức thanh toán</a></li>
+              <li><a href="#">Phương thức giao hàng</a></li>
+              <li><a href="#">Chính sách đổi trả</a></li>
+              <li><a href="#">Bảo mật thông tin</a></li>
+            </ul>
+          </div>
+
+          <!-- Cột 4: Thông tin -->
+          <div class="footer-column">
+            <h3>THÔNG TIN</h3>
+            <ul>
+              <li><a href="../../login.html">Đăng nhập</a></li>
+              <li><a href="../../register.html">Đăng ký</a></li>
+              <li><a href="#">Tra cứu đơn hàng</a></li>
+              <li><a href="#">Liên hệ</a></li>
+            </ul>
+          </div>
+
+          <!-- Cột 5: Facebook -->
+          <div class="footer-column">
+            <h3>KẾT NỐI VỚI TRI THỨC TRÊN FACEBOOK</h3>
+            <a href="#"
+              ><img
+                style="width: 50px"
+                src="../../../../image/hethong/fb.png"
+                alt="Facebook tri Thức"
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="../../../../js/animation.js"></script>
+    <script src="../../../../js/menu.js"></script>
+    <script src="../../../../js/quantity.js"></script>
+    <script src="../../../../js/cartcheck3.js"></script>
+    <script src="../../../../js/sweetalert2.all.min.js"></script>
+    <script src="../../../../js/dropbox.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <link rel=" stylesheet" href="../../css/register.css">
+    <link href="../../css/sweetalert2.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="logo">
+        <a href="../../index.html"><img src="../../image/thumbnail/smalling.png" alt="khong co"></a>
+    </div>
+    <div class="container">
+        <div class="login-box">
+            <div class="form-wrapper">
+                <div class="login-form">
+                    
+                    <h2>Đăng ký</h2>
+                    <form id="registerForm" action="">
+                        <div class="user">
+                            <input type="email" id="email"
+                            required id="email" placeholder="">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="user">
+                            <input type="text" id="username"
+                            required id="username" placeholder="">
+                            <label for="email">Tên đăng nhập</label>
+                        </div>
+                        <div class="password">
+                            <input type="password" id="password" 
+                            required id="password">
+                            <img src="../../image/hethong/eye.png" id="eyeicon" alt="khong co">
+                            <label for="password">Mật khẩu</label>
+                        </div>
+                        <div class="password">
+                            <input type="password" id="repassword"
+                            required id="repassword">
+                            <img src="../../image/hethong/eye.png" id="reeyeicon" alt="khong co">
+                            <label for="password">Xác nhận mật khẩu</label>
+                        </div>
+                        <button type="submit" class="btn">Đăng ký</button>   
+                        <div class="login-link">
+                            <p>Đã có tài khoản ? <button type="button" class="slc"> <a 
+                            href="login.html">Đăng nhập</button></a></p>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/register.js"></script>
+    <script src="../../js/sweetalert2.all.min.js"></script>
+</body>
+</html>

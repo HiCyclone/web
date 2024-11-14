@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Giao Hàng</title>
+    <link rel="stylesheet" href="../../css/checkout.css">
+    <link rel="stylesheet" href="../../css/sweetalert2.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div class="top-left-section">
+            <h1>TRI THUC BOOK</h1>
+            <nav>
+                <a href="cart.html">Giỏ hàng</a> &gt; <a href="checkout.html">Thông tin giao hàng</a> 
+            </nav>
+            <h2>Thông tin giao hàng</h2>
+            <div class="user-info">
+                <img src="" id="avatarDisplay" alt="User Avatar" class="user-avatar">
+                <p id="fullNameDisplay"></p>
+                <p>(</p>
+                <p id="emailDisplay"></p>
+                <p>)</p>
+                <a href="javascript:void(0)" onclick="confirmLogout()"><p>Đăng xuất</p></a>
+            </div>
+            </div>
+            <form>
+                <label for="saved-address">Địa chỉ đã lưu trữ</label>
+                <select id="saved-address">
+                    <option>Thêm địa chỉ mới...</option>
+                </select>
+                
+                <label for="name">Họ và tên</label>
+                <input type="text" class="form-control" name="fullName" >
+                
+                
+                <label for="phone">Số điện thoại</label>
+                <input type="text" id="phone" class="form-control" name="phone" placeholder="0xx xxx xxxx" maxlength="13" >
+                
+                
+                <label for="address">Địa chỉ</label>
+                <input type="text" class="form-control" name="address" >
+                
+                <div class="foot-form">
+                <a href="cart.html" class="return-cart">Giỏ hàng</a>
+                <button type="submit" class="btn-submit">Tiếp tục đến phương thức thanh toán</button>
+            </div>
+            </form>
+            
+        </div>
+
+        <div class="right-section">
+            <section id="cart" class="section-p1">
+                <table>
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+            <div class="coupon">
+                <input type="text" placeholder="Nhập mã giảm giá">
+                <button class="normal"><strong>Áp dụng</strong></button>
+            </div>
+                <div class="cost">
+                    <p>Tạm tính</p>
+                    <p id="cost"></p>
+                </div>
+                <div class="shipping-fee">
+                    <p>Phí vận chuyển</p>
+                    <p>20.000₫</p>
+                </div>
+                <div class="total">
+                    <p>Tổng cộng</p>
+                    <p id="total"></p>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+    <script src="../../js/logout.js"></script>
+    <script src="../../js/checkout.js"></script>
+    <script src="../../js/sweetalert2.all.min.js"></script>
+</body>
+</html>

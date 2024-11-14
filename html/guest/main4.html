@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> 
+    <title>Cua Hang Sach Tri Thuc</title>
+    <link rel="stylesheet" href="../../css/list.css" />
+    <link rel="stylesheet" href="../../css/sweetalert2.min.css">
+  </head>
+  <body>
+    <!-- Phần đầu trang (header) -->
+    <header class="header">
+      <div class="header-container">
+        <!-- Logo -->
+        <div class="logo">
+          <img src="../../image/thumbnail/smalling.png" alt="Logo" />
+        </div>
+        <div class="logo"></div>
+
+        <!-- Thanh tìm kiếm -->
+        <div class="search-bar">
+          <input type="text" id="searchInput" placeholder="Tìm kiếm..." onkeypress="handleKeyPress(event)" />
+          <button onclick="search()">Tìm kiếm</button>
+          <div id="userQuery"></div>
+          <script src="../../js/search3.js"></script>
+        </div>
+
+            <!-- Các biểu tượng chức năng -->
+            <div class="header-icons">
+          <ul class="ul-control-box">
+          <li class="top-hotline">
+            <a href="#">
+              <img src="../../image/hethong/phone1.png" alt="Tra cứu đơn hàng" />
+              <span>Tra cứu đơn hàng</span>
+            </a>
+          </li>
+          <li class="top-cart-box" id="cartBox">
+            <a href="javascript:void(0);">
+              <img src="../../image/hethong/giohang6.png" alt="Giỏ hàng" />
+              <span>Giỏ hàng</span>
+            </a>
+          </li>
+          <li class="user-box">
+            <a class="dropbox-info" onclick="UsertoggleMenu()">
+              <img src="../../image/hethong/user1.png" alt="Tài khoản" />
+              <span>Tài khoản</span>
+            </a>
+            <ul class="info-user" id="loginMenu">
+              <div class="login-menu">
+                <li class="info">
+                  <a href="login.html">
+                    <img src="../../image/hethong/enter.png" alt="">
+                    <p>Đăng nhập</p>
+                  </a>
+                </li>
+                <li class="info">
+                  <a href="register.html">
+                    <img src="../../image/hethong/add.png" alt="">
+                    <p>Đăng ký</p>
+                  </a>
+                </li>
+              </div>
+              
+            </ul>
+          </li> 
+              </ul>
+        </div>
+        </div>
+        <!-- Phần dưới của đầu trang -->
+        <div class="header-bottom">
+         
+          <div class="header-bottom-container">
+            <div class="menu">
+              <img src="../../image/hethong/list.png" alt="Phone" />
+                    <div id="menuToggle"><a href="#">DANH MỤC SÁCH</a>
+                      <div id="sub_menu">
+                        <ul class="menu_list">
+                          <li ><a href="../../index.html"><img src="../../image/imgbook/s1.webp"><span>TRANG CHỦ </span></img ></a><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                          <li ><a href="main.html"><img src="../../image/imgbook/s2.webp"><span>TOP SÁCH THAY ĐỔI CUỘC ĐỜI </span></img ></a><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                          <li id="sub_menu_child"><a href="main2.html"><img src="../../image/imgbook/s3.webp"><span>SÁCH MẦM NON </span></img ></a><i class="fa fa-angle-right" aria-hidden="true"></i>
+                          <div id="sub_menu2">
+                            <ul class="menu_list2">
+                              <li><a href="main2.1.html">▶ Bé Vào Lớp 1</a></li>
+                              <li><a href="main2.2.html">▶ Từ Điển Tranh</a></li>
+                              <li><a href="main2.3.html">▶ Phát Triển Trí Tuệ </a></li>
+                            </ul>
+                          </div>  
+                          </li>
+                          <li class="sub_menu_child_1"><a href="main3.html"><img src="../../image/imgbook/s4.webp"><span>SÁCH THIẾU NHI </span></img ></a><i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <div id="sub_menu3">
+                              <ul class="menu_list2">
+                                <li><a href="main3.1.html">▶ Truyện Tranh Màu</a></li>
+                                <li><a href="main3.2.html">▶ Truyện Chữ</a></li>
+                                <li><a href="main3.3.html">▶ Kỹ Năng Sống Cho Học Sinh </a></li>
+                              </ul>
+                            </div>
+                          
+                          </li>
+                          <li class="sub_menu_child_2"><a href="main4.html"><img src="../../image/imgbook/s5.webp"><span>SÁCH KỸ NĂNG </span></img ></a><i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <div id="sub_menu4">
+                              <ul class="menu_list2">
+                                <li><a href="main4.1.html">▶ Kỹ Năng Sống</a></li>
+                                <li><a href="main4.2.html">▶ Kỹ Năng Văn Phòng Công Sở</a></li>
+                                
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+              
+              
+            
+            <div class="menu">
+              <img src="../../image/hethong/book8.png" alt="Phone" />
+              <a href="#">Sản phẩm đã xem</a>
+            </div>
+            <div class="menu">
+              <img src="../../image/hethong/truck2.png" alt="Phone" />
+              <a href="#">Ship COD Toàn Quốc</a>
+            </div>
+            <div class="menu">
+              <img src="../../image/hethong/truck3.png" alt="Phone" />
+              <a href="#">Free Ship Đơn Hàng Trên 300k</a>
+            </div>
+            <div class="phone-number">
+              <img src="../../image/hethong/phone2.png" alt="Phone" />
+              <span>0111 222 333 / 0333 666 999</span>
+            </div>
+          </div>
+          </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        
+    </div>
+    <div class="fixed-social1">
+      <a href="https://www.facebook.com/TriThucBook" target="_blank">
+        <img src="../../image/hethong/fb.png" width="40" height="40" /><br />
+      </a>
+      <a href="javascript:void(0);" id="cartIcon">
+        <img src="../../image/hethong/giohang1.png" width="40" height="40" /><br />
+      </a>
+      <div class="box">
+        <a href="#top">
+          <img
+            style="padding-left: 5px"
+            src="../../image/hethong/up.png"
+            width="30"
+            height="30"
+          />
+        </a>
+      </div>
+    </div>
+    <div class="main col-md-12 col-xs-12">
+<div class="container">
+    <div class="row">
+        <ol class="breadcrumb breadcrumb-arrow hidden-sm hidden-xs">
+            <li><a href="/" target="_self">Trang chủ</a></li>
+      <span> &#8260; </span>
+            <li><a href="#" target="_self">Danh mục</a></li>
+      <span> &#8260; </span>
+            <li class="active"><span> SÁCH KỸ NĂNG</span></li>
+        </ol>
+      </div>
+      <div class="row row1">
+        <div class="col-md-3 left_main">
+            <div class="cartegory">
+              <p class="cartegory-header">Danh Mục Sản Phẩm</p>
+
+              <ul class="cartegory-list">
+                <li class="cartegory-item">
+                    <div class="cartegory_item">
+                      <span class="span-arr"></span>
+                      <a href="../../index.html" class="cartegory-item_link">TRANG CHỦ</a> </div>
+                </li>
+                <li class="cartegory-item">
+                 <div class="cartegory_item"> 
+                  <span class="span-arr"></span>
+                  <a href="main.html" class="cartegory-item_link">TOP SÁCH THAY ĐỔI CUỘC ĐỜI</a>
+                 </div>
+              </li>
+              <li class="cartegory-item">
+               <div class="cartegory_item">
+                <span class="span-arr"></span>
+                 <a href="main2.html" class="cartegory-item_link"id=menu_Toggle>SÁCH MẦM NON</a> 
+                 <div id="sub_menu_left_1">
+                  <ul class="menu-list2">
+                    <li><a href="main2.1.html">▶ Bé Vào Lớp 1</a></li>
+                    <li><a href="main2.2.html">▶ Từ Điển Tranh</a></li>
+                    <li><a href="main2.3.html">▶ Phát Triển Trí Tuệ </a></li>
+                  </ul>
+                </div>  
+              </div>
+                
+            </li>
+              <li class="cartegory-item">
+                <div class="cartegory_item">
+                  <span class="span-arr"></span>
+                  <a href="main3.html" class="cartegory-item_link"id=menu_Toggle_2>SÁCH THIẾU NHI</a> 
+                  <div id="sub_menu_left_2">
+                    <ul class="menu-list2">
+                      <li><a href="main3.1.html">▶ Truyện Tranh Màu</a></li>
+                      <li><a href="main3.2.html">▶ Truyện Tranh Chữ</a></li>
+                      <li><a href="main3.3.html">▶ Kỹ Năng Sống Cho Học Sinh </a></li>
+                    </ul>
+                  </div>  
+                </div>
+  
+            </li>
+            <li class="cartegory-item">
+              <div class="cartegory_item">
+                <span class="span-arr"></span>
+                <a href="main4.html" class="cartegory-item_link" id=menu_Toggle_3>SÁCH KỸ NĂNG</a>
+                <div id="sub_menu_left_3">
+                  <ul class="menu-list2">
+                    <li><a href="main4.1.html">▶ Kỹ Năng Sống</a></li>
+                    <li><a href="main4.2.html">▶ Kỹ Năng Văn Phòng Công Sở</a></li>
+                    
+                  </ul>
+                </div>  
+               </div>
+          </li>
+         
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-9 right_main">
+           
+             <div class="page_head">
+              <h1 class="title-page_head">SÁCH KỸ NĂNG</h1>
+             </div> 
+             <div class="tag">
+              <span class="custom">
+                <ul class="custom1">
+                  <li class="custom0">
+                    <a href="#" class="custom custom2">Mới / Nổi bật</a>
+                  </li> 
+                  <li class="custom0">
+                    <a href="#" class="custom custom2">Bán chạy nhất  </a>
+                  </li>
+                  <li class="custom0">
+                    <a href="#" class="custom custom2">Giảm giá nhiều</a>
+                  </li>
+                  <li class="custom0">
+                    <a href="#" class="custom custom2">Giá cao</a>
+                  </li>
+                </ul>
+              </span>
+             </div>
+             <div class="product-container" id="productContainer">
+              <div class="list-product">
+                <div class="product-item">
+                    <a href="ChiTietSanPham/book4/book4.1.html"><img src="../../image/imgbook/main4/4.1.webp"  alt="Sách: Bạn Không Cần Phải Tỏ Ra Hoàn Hảo" class="product-image"></a>
+                    <a href="ChiTietSanPham/book4/book4.1.html"  class="product-name">Sách:Xây dựng tư duy cầu tiến cho bạn trai</a>
+                    <p>
+                      <del class="original-price">145,000₫</del>
+                      <span class="discounted-price">116,000₫</span>
+                      <span class="discount-tag">-20%</span>
+                   </p>
+                </div>
+            
+                <div class="product-item">
+                    <a href="ChiTietSanPham/book4/book4.2.html"><img src="../../image/imgbook/main4/4.2.webp"  alt="Sách: Trở Thành CEO Của Cuộc Đời Mình" class="product-image"></a>
+                    <a href="ChiTietSanPham/book4/book4.2.html" class="product-name">Sách:Làm chủ ranh giới</a>
+                   <p>
+                      <del class="original-price">92,000₫</del>
+                      <span class="discounted-price">73,000₫</span>
+                      <span class="discount-tag">-20%</span>
+                   </p>
+                </div>
+            
+                <div class="product-item">
+                    <a href="ChiTietSanPham/book4/book4.3.html"><img src="../../image/imgbook/main4/4.3.webp"  alt="Sách: Làm Thế Nào Để Sống Một Đời Tốt Đẹp" class="product-image"></a>
+                    <a href="ChiTietSanPham/book4/book4.3.html" class="product-name">Sách:Văn hóa kết nối</a>
+                    <p>
+                      <del class="original-price">110,000₫</del>
+                      <span class="discounted-price">88,000₫</span>
+                      <span class="discount-tag">-20%</span>
+                   </p>
+                </div>
+            
+                <div class="product-item">
+                    <a href="ChiTietSanPham/book4/book4.4.html"><img src="../../image/imgbook/main4/4.4.webp"  alt="Sách: Trở Thành Phiên Bản Tốt Nhất Của Bạn" class="product-image"></a>
+                    <a href="ChiTietSanPham/book4/book4.4.html" class="product-name">Sách:sức khỏe tốt học tập tốt</a>
+                    <p>
+                      <del class="original-price">92,000₫</del>
+                      <span class="discounted-price">76,000₫</span>
+                      <span class="discount-tag">-20%</span>
+                   </p>
+                </div>
+              </div>
+              <div class="list-product">
+                  <div class="product-item">
+                      <a href="ChiTietSanPham/book4/book4.5.html"><img src="../../image/imgbook/main4/4.5.webp"  alt="Sách: Trở Thành Phiên Bản Tốt Nhất Của Bạn" class="product-image"></a>
+                      <a href="ChiTietSanPham/book4/book4.5.html" class="product-name">Sách:Đơn giản hóa việc học</a>
+                    <p>
+                      <del class="original-price">112,000₫</del>
+                      <span class="discounted-price">95,000₫</span>
+                      <span class="discount-tag">-20%</span>
+                   </p>
+                  </div>
+              <div class="product-item">
+                <a href="ChiTietSanPham/book4/book4.6.html"><img src="../../image/imgbook/main4/4.6.webp"  alt="Sách: Trở Thành Phiên Bản Tốt Nhất Của Bạn" class="product-image"></a>
+                <a href="ChiTietSanPham/book4/book4.6.html" class="product-name">Sách:Khi khủng hoảng ập đến</a>
+                <p>
+                  <del class="original-price">135,000₫</del>
+                  <span class="discounted-price">108,000₫</span>
+                  <span class="discount-tag">-20%</span>
+               </p>
+            </div>
+            <div class="product-item">
+              <a href="ChiTietSanPham/book4/book4.7.html"><img src="../../image/imgbook/main4/4.7.webp"  alt="Sách: Trở Thành Phiên Bản Tốt Nhất Của Bạn" class="product-image"></a>
+              <a href="ChiTietSanPham/book4/book4.7.html" class="product-name">Sách:Suy nghĩ và cảm xúc</a>
+              <p>
+                <del class="original-price">88,000₫</del>
+                <span class="discounted-price">70,000₫</span>
+                <span class="discount-tag">-20%</span>
+             </p>
+          </div>
+          <div class="product-item">
+            <a href="ChiTietSanPham/book4/book4.8.html"><img src="../../image/imgbook/main4/4.8.webp"  alt="Sách: Trở Thành Phiên Bản Tốt Nhất Của Bạn" class="product-image"></a>
+            <a href="ChiTietSanPham/book4/book4.8.html" class="product-name">Sách:Nhạy cảm</a>
+            <p>
+              <del class="original-price">105,000₫</del>
+              <span class="discounted-price">84,000₫</span>
+              <span class="discount-tag">-20%</span>
+           </p>
+        </div>
+              </div>
+              
+          </div>
+          <div class="col-md-12 bagi-bar">
+            <div class="clear_fix">
+              <ul class="page">
+                <li><span id="prevButton" onclick="prevPage()">prev</span></li>
+                <li><span id="page1" onclick="loadPage(1)" class="active">1</span></li>
+                <li><span id="page2" onclick="loadPage(2)">2</span></li>
+                <li><span id="nextButton" onclick="nextPage()">next</span></li>
+              </ul>
+            </div>
+          </div>
+          </div>
+      </div>
+</div>
+    </div>
+    <section id="last-footer">
+        <div class="father">
+         <div class="child">
+           <span class="name-icon pull-left fa fa-truck" ></span>
+           <h4>MIỄN PHÍ VẬN CHUYỂN</h4>
+           <p>cho đơn hàng trên 300.000 VNĐ</p>
+         </div>
+        </div>
+        <div class="father">
+         <div class="child">
+           <span><i class="fa-solid fa-money-bill-1-wave"></i>  </span>
+           <h4>SHIP COD TOÀN QUỐC</h4>
+           <p>Thanh toán khi nhận sách</p>
+         </div>
+        </div>
+        <div class="father">
+         <div class="child">
+           <span ><i class="fa-regular fa-face-laugh-wink"></i></span>
+           <h4>MIỄN PHÍ ĐỔI TRẢ HÀNG</h4>
+           <p>trong vòng 10 ngày</p>
+         </div>
+        </div>
+        <div class="father">
+         <div class="child">
+           <span class="name-icon pull-left fa fa-phone"></span>
+           <h4>HOTLINE</h4>
+           <p>0111 222 333 / 0333 666 999</p>
+         </div>  
+        </div>
+
+       </section>
+       <footer class="footer">
+        <div class="footer-container">
+          <!-- Cột 1: Thông tin công ty -->
+          <div class="footer-column">
+            <img src="../../image/thumbnail/smalling.png" alt="Minh Long Book Logo" />
+            <p>
+              <strong
+                >Công ty TNHH Một Thành viên Thương mại & Dịch vụ Văn hóa Tri
+                Thức</strong
+              >
+            </p>
+            <p>Mã Số Thuế: 0102726224</p>
+            <p>
+              <i class="fa fa-map-marker"></i> Văn phòng: Số 345, Dãy A, Đường An
+              Dương Vương, Phường 5, Quận 5, TPHCM.
+            </p>
+            <p>
+              <i class="fa fa-map-marker"></i> Cửa hàng: Gian hàng Tri Thức Book
+              tại Phố Sách Sài Gòn, Phố 3 tháng 2, Nguyễn Thị Minh Khai, TPHCM.
+            </p>
+            <p><i class="fa fa-phone"></i> 0333 666 999 - 0111 222 333</p>
+            <p><i class="fa fa-envelope"></i> cskh@trithucbook.vn</p>
+            <p>
+              <i class="fa fa-map-marker"></i> Chi nhánh Miền Bắc: 33 Đỗ Thừa Tự,
+              Tân Quý, Tân Phú, Hà Nội, Việt Nam.
+            </p>
+            <p><i class="fa fa-phone"></i> 0111 222 333</p>
+          </div>
+  
+          <!-- Cột 2: Tin tức -->
+          <div class="footer-column">
+            <h3>TIN TỨC</h3>
+            <ul>
+              <li><a href="#">Giới thiệu</a></li>
+              <li><a href="#">Điểm sách</a></li>
+              <li><a href="#">Tuyển dụng</a></li>
+              <li><a href="#">Sự kiện</a></li>
+              <li><a href="#">Tin khuyến mại</a></li>
+            </ul>
+          </div>
+  
+          <!-- Cột 3: Hỗ trợ khách hàng -->
+          <div class="footer-column">
+            <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+            <ul>
+              <li><a href="#">Điều khoản sử dụng</a></li>
+              <li><a href="#">Hướng dẫn mua hàng</a></li>
+              <li><a href="#">Phương thức thanh toán</a></li>
+              <li><a href="#">Phương thức giao hàng</a></li>
+              <li><a href="#">Chính sách đổi trả</a></li>
+              <li><a href="#">Bảo mật thông tin</a></li>
+            </ul>
+          </div>
+  
+          <!-- Cột 4: Thông tin -->
+          <div class="footer-column">
+            <h3>THÔNG TIN</h3>
+            <ul>
+              <li><a href="login.html">Đăng nhập</a></li>
+              <li><a href="register.html">Đăng ký</a></li>
+              <li><a href="#">Tra cứu đơn hàng</a></li>
+              <li><a href="#">Liên hệ</a></li>
+            </ul>
+          </div>
+  
+          <!-- Cột 5: Facebook -->
+          <div class="footer-column">
+            <h3>KẾT NỐI VỚI TRI THỨC TRÊN FACEBOOK</h3>
+            <a href="#"
+              ><img
+                style="width: 50px"
+                src="../../image/hethong/fb.png"
+                alt="Facebook tri Thức"
+            /></a>
+          </div>
+        </div>
+      </footer>
+   <script src="../../js/pagination.js"></script>
+    <script src="../../js/menu.js"></script>
+    <script src="../../js/menu_child.js"></script>
+    <script src="../../js/cartcheck1.js"></script>
+    <script src="../../js/sweetalert2.all.min.js"></script>
+    <script src="../../js/dropbox.js"></script>
+</body>
+</html>
